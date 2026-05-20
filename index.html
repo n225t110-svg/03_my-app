@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コテコテ関西弁コンバーター</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i data-lucide="languages"></i>
+                <h1>コテコテ<span>関西弁</span>コンバーター</h1>
+            </div>
+            <p class="subtitle">標準語をバリバリの関西弁に直しまっせ！</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="section-header">
+                    <label for="input-text">標準語を入力してや</label>
+                    <button id="clear-btn" class="icon-btn" title="クリア">
+                        <i data-lucide="trash-2"></i>
+                    </button>
+                </div>
+                <textarea id="input-text" placeholder="例：ありがとうございます。今日はとても天気がいいですね。それは違いますよ。"></textarea>
+                
+                <div class="example-tags">
+                    <span>例：</span>
+                    <button class="tag-btn">ありがとうございます</button>
+                    <button class="tag-btn">ダメです</button>
+                    <button class="tag-btn">本当ですか？</button>
+                    <button class="tag-btn">違いますよ</button>
+                </div>
+            </section>
+
+            <div class="action-divider">
+                <button id="convert-btn">
+                    <span>変換！</span>
+                    <i data-lucide="arrow-down"></i>
+                </button>
+            </div>
+
+            <section class="output-section">
+                <div class="section-header">
+                    <label>関西弁やで！</label>
+                    <button id="copy-btn" class="icon-btn" title="コピー">
+                        <i data-lucide="copy"></i>
+                    </button>
+                </div>
+                <div id="output-text" class="output-box">
+                    ここに変換結果が出るで〜
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Kansai-ben Converter - おおきに！</p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast">コピーしたで！</div>
+
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
